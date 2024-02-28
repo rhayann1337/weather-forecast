@@ -1,0 +1,99 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 16px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.container-weather {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 24px;
+  display: flex;
+  padding: 16px;
+}
+
+.weather,
+.date-info,
+.location-info,
+.info-weather {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.weather {
+  padding-right: 16px;
+  justify-content: center;
+  border-right: solid 1px rgba(0, 0, 0, 0.2);
+}
+
+.temperature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.value {
+  font-size: 55px;
+  font-weight: 700;
+  line-height: 16px;
+  margin: 0;
+}
+
+.containerValue {
+  margin-bottom: 0;
+}
+
+.weathertext, .temperature_hist {
+  font-size: 32px;
+  line-height: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.temperature_hist {
+  font-size: 24px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.date,
+.time,
+.daystatus {
+  margin-bottom: 0;
+}
+
+.location {
+  font-size: 32px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.info-weather {
+  padding-left: 16px;
+  align-items: initial;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+.forecast {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+
