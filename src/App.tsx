@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState }    from "react";
 import "./App.css";
 import { Item } from "./components/Item/Item";
 import axios from "axios";
 import { format } from "date-fns";
 import { ForecastItem } from "./components/ForecastItem/ForecastItem";
+import SummerIcon from '../src/assets/temperature-hot.png'
+import WinterIcon from '../src/assets/temperature-cold.png'
 
 function App() {
   const endpoint =
@@ -66,10 +68,10 @@ function App() {
             <Item text="Humidity" mainText={`${data?.current.humidity}%`} />
             <Item text="Temperature History">
               <span className="temperature_hist">
-                MAX {data?.forecast.forecastday[0].day.maxtemp_c}
+              <img className="forecast-icon" alt="Forecast"  src={SummerIcon} /> {data?.forecast.forecastday[0].day.maxtemp_c}
               </span>
               <span className="temperature_hist">
-                MIN {data?.forecast.forecastday[0].day.mintemp_c}
+              <img className="forecast-icon" alt="Forecast"  src={WinterIcon} /> {data?.forecast.forecastday[0].day.mintemp_c}
               </span>
             </Item>
           </div>
